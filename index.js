@@ -15,13 +15,7 @@ let counter = 0;
 const itemsContainer = document.getElementById("shop-list-container");
 
 
-//sectioning and styling of the shopping details
-function eachColumn(formContent) {
-    
 
-    let eachinput = "<div id='column" + formContent.id + "' class='column'><div class='card'><div class='card-head'>" + formContent.itemName + "</div><div class='class-content'><p>" + formContent.description + "</p><small>" + formContent.quantity + "</small></div><div class='card-footer'><button type='button' name='delete-button' onclick='deleteItem(" + formContent.id + ")' class='del-btn' data-id=" + formContent.id + ">Done</button></div></div></div>";
-
-    return itemsContainer.innerHTML += eachinput;
    
 
 }
@@ -75,6 +69,15 @@ function deleteItem(delete_id) {
     listAdded.splice(index, 1);
     updateItem();
     
+}
+
+//sectioning and styling of the shopping details
+function eachColumn(formContent) {
+    
+
+    let eachinput = "<div id='column" + formContent.id + "' class='column'><div class='card'><div class='card-head'>" + formContent.itemName + "</div><div class='class-content'><p>" + formContent.description + "</p><small>" + formContent.quantity + "</small></div><div class='card-footer'><button type='button' name='delete-button' onclick='deleteItem(" + formContent.id + ")' class='del-btn' data-id=" + formContent.id + ">Done</button></div></div></div>";
+
+    return itemsContainer.innerHTML += eachinput;
 }
 
 addBtn.addEventListener("click", addItem)
