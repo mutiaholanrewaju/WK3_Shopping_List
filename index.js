@@ -3,6 +3,9 @@
 
 const listAdded = [];
 const addBtn = document.getElementById("add-btn");
+const itemName = document.getElementById("itemName").value;
+const quantity = document.getElementById("quantity").value;
+const description = document.getElementById("desc").value;
 
 
 
@@ -24,12 +27,18 @@ function updateItem() {
 
 }
 
+function resetForm {
+    itemName.value = "";
+    quantity.value = "";
+    desc.value = "";
+}
 function addItem() {
 
+    resetForm();
     counter++;
-    const itemName = document.getElementById("itemName").value;
-    const quantity = document.getElementById("quantity").value;
-    const description = document.getElementById("desc").value;
+    //const itemName = document.getElementById("itemName").value;
+    //const quantity = document.getElementById("quantity").value;
+    //const description = document.getElementById("desc").value;
 
 
     //Form object
@@ -42,10 +51,10 @@ function addItem() {
 
     listAdded.push(formContent);
     updateItem();
-
-    itemName.value = "";
-    quantity.value = "";
-    desc.value = "";
+    resetForm();
+    //itemName.value = "";
+    //quantity.value = "";
+    //desc.value = "";
 }
 //Delete 
 function deleteItem(delete_id) {
