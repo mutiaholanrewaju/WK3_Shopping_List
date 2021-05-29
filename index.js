@@ -1,7 +1,8 @@
 
 
-
+//Creating an array list for the shopping details 
 const listAdded = [];
+
 const addBtn = document.getElementById("add-btn");
 const itemName = document.getElementById("itemName").value;
 const quantity = document.getElementById("quantity").value;
@@ -14,6 +15,17 @@ let counter = 0;
 const itemsContainer = document.getElementById("shop-list-container");
 
 
+//sectioning and styling of the shopping details
+function eachColumn(formContent) {
+    
+
+    let eachinput = "<div id='column" + formContent.id + "' class='column'><div class='card'><div class='card-head'>" + formContent.itemName + "</div><div class='class-content'><p>" + formContent.description + "</p><small>" + formContent.quantity + "</small></div><div class='card-footer'><button type='button' name='delete-button' onclick='deleteItem(" + formContent.id + ")' class='del-btn' data-id=" + formContent.id + ">Done</button></div></div></div>";
+
+    return itemsContainer.innerHTML += eachinput;
+   
+
+}
+//Updating the shopping array
 function updateItem() {
 
     itemsContainer.innerHTML = "";
@@ -27,23 +39,18 @@ function updateItem() {
 
 }
 
-//function resetForm {
-    //itemName.value = "";
-    //quantity.value = "";
-    //desc.value = "";}
 
 function addItem() {
 
-    itemName.value = "";
-    quantity.value = "";
-    desc.value = "";
+    
     counter++;
-    const itemName = document.getElementById("itemName").value;
-    const quantity = document.getElementById("quantity").value;
-    const description = document.getElementById("desc").value;
+    //const itemName = document.getElementById("itemName").value;
+    //const quantity = document.getElementById("quantity").value;
+    //const description = document.getElementById("desc").value;
 
 
-    //Form object
+    
+//Form object
     const formContent = {
         id: counter,
         itemName: itemName,
@@ -53,12 +60,12 @@ function addItem() {
 
     listAdded.push(formContent);
     updateItem();
-    //resetForm();
+    
     itemName.value = "";
     quantity.value = "";
     desc.value = "";
 }
-//Delete 
+//Delete function once the shopping item is done 
 function deleteItem(delete_id) {
 
     let index = listAdded.map(x => {
@@ -68,16 +75,6 @@ function deleteItem(delete_id) {
     listAdded.splice(index, 1);
     updateItem();
     
-}
-//sectioning and styling of the shoping details
-function eachColumn(formContent) {
-    
-
-    let eachinput = "<div id='column" + formContent.id + "' class='column'><div class='card'><div class='card-head'>" + formContent.itemName + "</div><div class='class-content'><p>" + formContent.description + "</p><small>" + formContent.quantity + "</small></div><div class='card-footer'><button type='button' name='delete-button' onclick='deleteItem(" + formContent.id + ")' class='del-btn' data-id=" + formContent.id + ">Done</button></div></div></div>";
-
-    return itemsContainer.innerHTML += eachinput;
-   
-
 }
 
 addBtn.addEventListener("click", addItem)
