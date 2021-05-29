@@ -40,7 +40,7 @@ function addItem() {
         description: description
     };
 
-    itemsAdded.push(formContent);
+    listAdded.push(formContent);
     updateItem();
 
     itemName.value = "";
