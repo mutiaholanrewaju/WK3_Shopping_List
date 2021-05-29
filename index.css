@@ -1,0 +1,70 @@
+
+
+form{
+    margin: 0 auto;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 400px;
+    width: 50%;
+    height:50vh;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    align-self: center;
+}
+.shop {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    align-self: center;
+
+}
+
+.item {
+border-radius: 10px;
+align-self: center;
+height: 5vh;
+
+}
+
+#desc {
+    align-self:center;
+    grid-column: span 2;
+    border-radius: 10px;
+    height: 15vh;
+
+}
+
+button{
+    align-self: center;
+    grid-column: span 2;
+    justify-self: center;
+    background-color: green;
+    font-weight: bold;
+    display:flex;
+    justify-self:center;
+    justify-content: center;
+    border-radius:8px;
+    
+    height: 40px;
+    width: 60px;
+} 
+
+.add-btn::before{
+    position: relative;
+    font-family: fontAwesome;
+    content: "\f067\00a0";
+    color: black;
+    margin-top: 10px;
+    
+}
+/* button.btn.add::before {
+  font-family: fontAwesome;
+  content: "\f067\00a0";
+} */
