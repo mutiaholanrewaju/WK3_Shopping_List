@@ -30,17 +30,17 @@ function updateItem() {
 //function resetForm {
     //itemName.value = "";
     //quantity.value = "";
-    //desc.value = "";
-}
+    //desc.value = "";}
+
 function addItem() {
 
     itemName.value = "";
     quantity.value = "";
     desc.value = "";
     counter++;
-    //const itemName = document.getElementById("itemName").value;
-    //const quantity = document.getElementById("quantity").value;
-    //const description = document.getElementById("desc").value;
+    const itemName = document.getElementById("itemName").value;
+    const quantity = document.getElementById("quantity").value;
+    const description = document.getElementById("desc").value;
 
 
     //Form object
