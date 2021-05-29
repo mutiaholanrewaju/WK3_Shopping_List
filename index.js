@@ -4,10 +4,6 @@
 const listAdded = [];
 
 const addBtn = document.getElementById("add-btn");
-const itemName = document.getElementById("itemName").value;
-const quantity = document.getElementById("quantity").value;
-const description = document.getElementById("desc").value;
-
 
 
 let counter = 0;
@@ -16,9 +12,6 @@ const itemsContainer = document.getElementById("shop-list-container");
 
 
 
-   
-
-}
 //Updating the shopping array
 function updateItem() {
 
@@ -38,9 +31,9 @@ function addItem() {
 
     
     counter++;
-    //const itemName = document.getElementById("itemName").value;
-    //const quantity = document.getElementById("quantity").value;
-    //const description = document.getElementById("desc").value;
+    const itemName = document.getElementById("itemName").value;
+    const quantity = document.getElementById("quantity").value;
+    const description = document.getElementById("desc").value;
 
 
     
@@ -59,6 +52,7 @@ function addItem() {
     quantity.value = "";
     desc.value = "";
 }
+
 //Delete function once the shopping item is done 
 function deleteItem(delete_id) {
 
