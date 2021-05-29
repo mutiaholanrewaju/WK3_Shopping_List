@@ -27,14 +27,16 @@ function updateItem() {
 
 }
 
-function resetForm {
-    itemName.value = "";
-    quantity.value = "";
-    desc.value = "";
+//function resetForm {
+    //itemName.value = "";
+    //quantity.value = "";
+    //desc.value = "";
 }
 function addItem() {
 
-    resetForm();
+    itemName.value = "";
+    quantity.value = "";
+    desc.value = "";
     counter++;
     //const itemName = document.getElementById("itemName").value;
     //const quantity = document.getElementById("quantity").value;
@@ -51,10 +53,10 @@ function addItem() {
 
     listAdded.push(formContent);
     updateItem();
-    resetForm();
-    //itemName.value = "";
-    //quantity.value = "";
-    //desc.value = "";
+    //resetForm();
+    itemName.value = "";
+    quantity.value = "";
+    desc.value = "";
 }
 //Delete 
 function deleteItem(delete_id) {
