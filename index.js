@@ -1,12 +1,12 @@
 
 
 
-const itemsAdded = [];
+const listAdded = [];
 const addBtn = document.getElementById("add-btn");
 
 
 
-let count = 0;
+let counter = 0;
 
 const itemsContainer = document.getElementById("shop-list-container");
 
@@ -15,9 +15,9 @@ function updateItem() {
 
     itemsContainer.innerHTML = "";
 
-    for (let idx = 0; idx < itemsAdded.length; idx++) {
+    for (let i = 0; i < listAdded.length; i++) {
 
-        eachColumn(itemsAdded[idx])
+        eachColumn(listAdded[i])
 
 
     }
@@ -26,7 +26,7 @@ function updateItem() {
 
 function addItem() {
 
-    count++;
+    counter++;
     const itemName = document.getElementById("itemName").value;
     const quantity = document.getElementById("quantity").value;
     const description = document.getElementById("desc").value;
@@ -34,7 +34,7 @@ function addItem() {
 
     //Form object
     const formContent = {
-        id: count,
+        id: counter,
         itemName: itemName,
         quantity: quantity,
         description: description
@@ -50,11 +50,11 @@ function addItem() {
 //Delete 
 function deleteItem(delete_id) {
 
-    let index = itemsAdded.map(x => {
+    let index = listAdded.map(x => {
         return x.id;
     }).indexOf(delete_id);
 
-    itemsAdded.splice(index, 1);
+    listAdded.splice(index, 1);
     updateItem();
     
 }
@@ -62,7 +62,7 @@ function deleteItem(delete_id) {
 function eachColumn(formContent) {
     
 
-    let eachinput = "<div id='column" + formContent.id + "' class='column'><div class='card'><div class='card-head'>" + formContent.itemName + "</div><div class='class-content'><p>" + formContent.description + "</p><small>" + formContent.quantity + "</small></div><div class='card-footer'><button type='button' name='delete-button' onclick='deleteItem(" + formContent.id + ")' class='del-btn' data-id=" + formContent.id + ">Remove</button></div></div></div>";
+    let eachinput = "<div id='column" + formContent.id + "' class='column'><div class='card'><div class='card-head'>" + formContent.itemName + "</div><div class='class-content'><p>" + formContent.description + "</p><small>" + formContent.quantity + "</small></div><div class='card-footer'><button type='button' name='delete-button' onclick='deleteItem(" + formContent.id + ")' class='del-btn' data-id=" + formContent.id + ">Done</button></div></div></div>";
 
     return itemsContainer.innerHTML += eachinput;
    
