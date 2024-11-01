@@ -1,1 +1,1 @@
-This is a simple Shopping list application that helps you keep record of your shopping list and mark those item purchase as done
+This interactive web app allows users to create and manage a personalized shopping list. The application accepts item names, quantities, and descriptions, then organizes these entries in a dynamic list. Users can easily add new items or remove existing ones, ensuring an up-to-date list for any shopping trip. The application is deployed on Vercel, making it accessible across devices for efficient, on-the-go list management
